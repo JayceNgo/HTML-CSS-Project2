@@ -3,7 +3,7 @@
 }
 
 :root {
-    --btn-color: #ffb900;
+    --primary-color: #ffb900;
     --btn-hover-color: #171100;
     --info-text-color: #5f5b53;
 }
@@ -34,6 +34,7 @@ a {
     text-align: center;
     font-size: 1.6rem;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .content {
@@ -43,6 +44,20 @@ a {
     margin-right: auto;
 }
 
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 1);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-clamp.line-2 {
+    --line-clamp: 2;
+}
+
+.break-all {
+    word-break: break-all;
+}
 /* ------------- Common -------------  */
 
 /* ------------- Header -------------  */
@@ -114,6 +129,7 @@ header {
 /* Hero Left side */
 .img-block {
     position: relative;
+    display: block;
 }
 .img-block .main-img {
     width: 470px;
@@ -133,6 +149,7 @@ header {
 }
 .img-block .courses-list {
     display: flex;
+    align-items: center;
     margin-bottom: 14px;
 }
 
@@ -212,7 +229,7 @@ header {
 .hero .hero-cta {
     min-width: 180px;
     line-height: 64px;
-    background: var(--btn-color);
+    background: var(--primary-color);
 }
 
 .hero-cta:hover {
@@ -267,8 +284,161 @@ header {
 
 .hero .info-block strong {
     color: #171100;
-    font-family: Sen;
+    font-family: Sen, "sans-serif";
     font-size: 4.4rem;
     font-weight: 700;
     line-height: 5.4rem;
 }
+/* ------------- Popular -------------  */
+.popular {
+    padding-top: 200px;
+}
+/* ------------- Popular Top -------------  */
+
+.popular-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popular-top .heading {
+    color: #171100;
+    font-family: Sen, "sans-serif";
+    font-size: 3.8rem;
+    font-weight: 700;
+    line-height: 1.26; /* 126.316% */
+    letter-spacing: -0.076rem;
+}
+
+.popular-top .desc {
+    color: #5f5b53;
+    font-size: 1.8rem;
+    font-weight: 400;
+    width: 458px;
+    line-height: 1.67; /* 166.667% */
+}
+
+.popular-top .controls {
+    display: flex;
+}
+
+.popular-top .control-btns {
+    position: relative;
+    border: none;
+    background: transparent;
+}
+
+.popular-top .control-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    background: transparent;
+    border-radius: 100%;
+}
+
+.popular-top .control-btn:hover {
+    background: var(--primary-color);
+    cursor: pointer;
+    color: #fff;
+}
+
+.popular-top .control-btn:last-of-type {
+    margin-left: 20px;
+}
+/* ------------- End Popular Top -------------  */
+
+/* ------------- Popular List -------------  */
+
+.popular .courses-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 55px;
+}
+
+.popular .course-item {
+    flex: 1;
+    border-radius: 12px;
+    border: 1px solid #e2dfda;
+    background: #fff;
+}
+
+.popular .course-item:hover {
+    border-color: transparent;
+    box-shadow: 0px 18px 36px 0px rgba(0, 0, 0, 0.1);
+}
+
+.popular .course-item .thumb {
+    height: 278px;
+    border-radius: 12px 12px 0px 0px;
+    margin: -1px;
+    object-fit: cover;
+    width: calc(100% + 1.5px);
+}
+
+.popular .course-item .info {
+    padding: 16px 22px 22px;
+}
+
+.popular .course-item .rating,
+.popular .course-item .foot,
+.popular .course-item .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.popular .course-item .tilte {
+    color: #171100;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 3rem; /* 166.667% */
+}
+
+.popular .rating img {
+    width: 18px;
+    height: 18px;
+}
+
+.popular .rating .value {
+    color: #fea31b;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.75;
+    margin-left: 6px;
+}
+.popular .courses-list .desc {
+    margin-top: 6px;
+    color: #5f5b53;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.86; /* 185.714% */
+}
+
+.popular .courses-list .foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 12px;
+}
+
+.popular .foot .price {
+    color: #171100;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.67; /* 166.667% */
+}
+
+.popular .course-item .book-btn {
+    border: none;
+}
+
+.popular .course-item .book-btn:hover {
+    color: #fff;
+    background: var(--primary-color);
+}
+/* ------------- End Popular -------------  */
