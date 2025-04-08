@@ -291,7 +291,6 @@ header {
 }
 /* ------------- Popular -------------  */
 .popular {
-    background: #9fd6bc;
     padding-top: 200px;
     padding-bottom: 200px;
 }
@@ -520,7 +519,7 @@ header {
 
 /* ------------- Feature-1 -------------  */
 .features {
-    background: #ccc;
+    /* background: #ccc; */
 }
 
 .feature-1 {
@@ -584,7 +583,7 @@ header {
 .features .btn:hover {
     opacity: 0.8;
 }
-
+/* Feature 2 */
 .feature-2 {
     display: flex;
     justify-content: space-between;
@@ -602,4 +601,130 @@ header {
     border-radius: 20px;
     object-fit: cover;
     object-position: top;
+}
+
+/* Blog Section */
+
+.blog {
+    padding: 96px 0 140px 0;
+    background: #fffcf4;
+}
+
+.blog .title {
+    color: #130606;
+    text-align: center;
+    font-family: Sen, "sans-serif";
+    font-size: 3.8rem;
+    font-weight: 700;
+    line-height: 1.26; /* 126.316% */
+    letter-spacing: -0.076rem;
+}
+
+.blog .desc {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 16px;
+    text-align: center;
+    color: #696262;
+    font-size: 1.8rem;
+    line-height: 1.75; /* 175% */
+    width: 448px;
+}
+
+.blog .blogs-list {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 55px;
+}
+
+.blog .blog-item {
+    border-radius: 16px;
+    width: 370px;
+    background: #ffffff;
+}
+
+.blog .blog-item:hover {
+    border-color: transparent;
+    box-shadow: 0px 18px 36px 0px rgba(0, 0, 0, 0.1);
+}
+
+.blogs-list .image {
+    width: 370px;
+
+    height: 250px;
+    object-fit: cover;
+    border-radius: 16px 16px 0px 0px;
+}
+
+.blog .info {
+    margin: 20px 20px 28px 20px;
+}
+
+.blogs-list .post-date {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    color: #5f5b53;
+    font-size: 1.4rem;
+    line-height: 1.86rem; /* 185.714% */
+}
+
+.blogs-list .post-date::before {
+    content: "";
+    background: var(--primary-color);
+    width: 6px;
+    height: 6px;
+    margin-right: 4px;
+    border-radius: 50%;
+}
+
+.blogs-list .post-date::after {
+    position: absolute;
+    content: "";
+    background: #e2dfda;
+    width: 160px;
+    height: 1px;
+    left: 0;
+    bottom: -12px;
+    border-radius: 999px;
+}
+
+.blogs-list .sub-title {
+    color: #171100;
+    font-size: 1.7rem;
+    font-weight: 600;
+    line-height: 1.75; /* 175% */
+    margin-top: 24px;
+}
+
+.blogs-list .btn {
+    margin-top: 12px;
+    border: none;
+    height: 50px;
+}
+
+.blogs-list .btn:hover {
+    background: var(--primary-color);
+}
+
+.blog .dots {
+    display: flex;
+    position: absolute;
+    top: 505px;
+    left: 570px;
+}
+
+.blog .dot {
+    margin-right: 6px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #634700;
+    cursor: pointer;
+}
+
+.blog .dot.active {
+    background: #ffb900;
+    cursor: default;
 }
